@@ -11,6 +11,11 @@ document.querySelector('.portfolio-button').addEventListener("click", event => {
 window.onload = function WindowLoad(event) {
     setNumOfYears(startedPersonal, totalTimeSpan);
     setNumOfYears(startedProfessional, totalProfessionalTimeSpan);
+    document.querySelector('body').style.opacity = 1
+}
+
+window.transitionToPage = function() {
+    document.querySelector('body').style.opacity = 0
 }
 
 function setNumOfYears(startDate, span){
