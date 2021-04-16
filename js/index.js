@@ -1,5 +1,9 @@
-const swup = new Swup()
-
-window.onload = function WindowLoad(event) {
-    document.querySelector('body').style.opacity = 1
+function myFunction() {
+    var x = document.getElementById("nav-bar");
+    if (x.className === "nav-bar") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav-bar";
+    }
 }
+const swup = new Swup()
