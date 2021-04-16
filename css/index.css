@@ -214,13 +214,16 @@ nav {
     max-width: 1000px;
     margin: auto;
   }
-  .nav-bar a {
+  .nav-bar .logo {
     float: left;
+  }
+  .nav-bar a {
+    float: right;
     color: black;
     text-align: center;
     text-decoration: none;
     font-size: 17px;
-    line-height: 70px;
+    line-height: 65px;
     padding: 0 15px;
   }
   .nav-bar a:hover {
@@ -230,6 +233,7 @@ nav {
     background-color: #71c7ec;
   }
   .nav-bar a img {
+    float: left;
     vertical-align: middle;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -258,7 +262,7 @@ nav {
     text-align: center;
     text-decoration: none;
     font-size: 17px;
-    line-height: 70px;
+    line-height: 65px;
     padding: 0 15px;
   }
   .nav-bar a img {

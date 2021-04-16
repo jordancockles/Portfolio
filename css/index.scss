@@ -164,13 +164,16 @@ nav {
 	.nav-bar {
 		max-width: 1000px;
 		margin: auto;
-		a {
+		.logo {
 			float: left;
+		}
+		a {
+			float: right;
 			color: black;
 			text-align: center;
 			text-decoration: none;
 			font-size: 17px;
-			line-height: 70px;
+			line-height: 65px;
 			padding: 0 15px;
 			&:hover {
 				background-color: #71c7ec;
@@ -179,6 +182,7 @@ nav {
 				background-color: #71c7ec;
 			}
 			img {
+				float: left;
 				vertical-align: middle;
 				box-sizing: border-box;
 				border-radius: 50%;
@@ -206,7 +210,7 @@ nav {
 			text-align: center;
 			text-decoration: none;
 			font-size: 17px;
-			line-height: 70px;
+			line-height: 65px;
 			padding: 0 15px;
 			img {
 				vertical-align: middle;
