@@ -3,6 +3,13 @@
   src: url(../fonts/montserrat/Montserrat-Regular.ttf);
 }
 
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .transition-fade {
   opacity: 1;
   -webkit-transition: 500ms;
@@ -55,6 +62,56 @@ nav {
   overflow: hidden;
 }
 
+.button {
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: #1b2735;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: .75rem 1.25rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -2;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #71c7ec;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  z-index: -1;
+}
+
+.button:hover:before {
+  width: 100%;
+}
+
+.button.portfolio-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
 .centered-content-box {
   text-align: center;
   -webkit-box-sizing: border-box;
@@ -72,53 +129,6 @@ nav {
   font-size: 64px;
   margin: 10px;
   font-family: montserrat;
-}
-
-.centered-content-box span.portfolio-button {
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
-  color: #1b2735;
-  font-weight: bold;
-  font-size: 16px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 20px;
-  padding: .75rem 1.25rem;
-  text-transform: uppercase;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.centered-content-box span.portfolio-button:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: -2;
-}
-
-.centered-content-box span.portfolio-button:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: #71c7ec;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  z-index: -1;
-}
-
-.centered-content-box span.portfolio-button:hover:before {
-  width: 100%;
 }
 
 .centered-content-box img.portfolio-image {
@@ -196,6 +206,10 @@ nav {
   background-image: url("../img/snr-analyst.jpg");
 }
 
+span.logo a:hover {
+  background-color: white;
+}
+
 @media (min-width: 800px) {
   footer {
     -webkit-box-sizing: border-box;
@@ -257,12 +271,13 @@ nav {
     margin: auto;
   }
   .nav-bar a {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     float: left;
     color: black;
     text-align: center;
     text-decoration: none;
-    font-size: 17px;
-    line-height: 65px;
+    line-height: 68px;
     padding: 0 15px;
   }
   .nav-bar a img {
@@ -271,7 +286,7 @@ nav {
             box-sizing: border-box;
     border-radius: 50%;
     height: 65px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px;
   }
   .nav-bar a:hover {
     background-color: #71c7ec;

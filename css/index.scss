@@ -2,6 +2,12 @@
 	font-family: montserrat;
 	src: url(../fonts/montserrat/Montserrat-Regular.ttf);
 }
+.disable-select {
+	-webkit-user-select: none;  
+	-moz-user-select: none;    
+	-ms-user-select: none;      
+	user-select: none;
+}
 .transition-fade {
 	opacity: 1;
 	transition: 500ms;
@@ -39,6 +45,51 @@ nav {
 	position: absolute;
 	overflow: hidden;
 }
+.button {
+	$button-bg-color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	color: #1b2735;
+	box-sizing: border-box;
+	padding: .75rem 1.25rem;
+	transition: all .3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		z-index: -2;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: #71c7ec;
+		transition: all .3s;
+		z-index: -1;
+	}
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+	}
+}
+.button.portfolio-link {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 20px;
+}
 .centered-content-box {
 	text-align: center;
 	box-sizing: border-box;
@@ -52,49 +103,6 @@ nav {
 		font-size: 64px;
 		margin: 10px;
 		font-family: montserrat;
-	}
-	span.portfolio-button {
-		$button-bg-color: #fff;
-		cursor: pointer;
-		display: inline-block;
-		text-decoration: none;
-		color: #1b2735;
-		font-weight: bold;
-		font-size: 16px;
-		box-sizing: border-box;
-		margin: 20px;
-		padding: .75rem 1.25rem;
-		text-transform: uppercase;
-		transition: all .3s;
-		position: relative;
-		overflow: hidden;
-		z-index: 1;
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #fff;
-			z-index: -2;
-		}
-		&:before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 0%;
-			height: 100%;
-			background-color: #71c7ec;
-			transition: all .3s;
-			z-index: -1;
-		}
-		&:hover {
-			&:before {
-				width: 100%;
-			}
-		}
 	}
 	img.portfolio-image {
 		height: 150px;
@@ -147,6 +155,11 @@ nav {
 }
 #devops-snr-analyst {
 	background-image: url("../img/snr-analyst.jpg");
+}
+span.logo a {
+	&:hover {
+		background-color: white;
+	}
 }
 @media (min-width:800px) {
 	footer {
@@ -205,19 +218,19 @@ nav {
 	.nav-bar {
 		margin: auto;
 		a {
+			box-sizing: border-box;
 			float: left;
 			color: black;
 			text-align: center;
 			text-decoration: none;
-			font-size: 17px;
-			line-height: 65px;
+			line-height: 68px;
 			padding: 0 15px;
 			img {
 				vertical-align: middle;
 				box-sizing: border-box;
 				border-radius: 50%;
 				height: 65px;
-				padding: 10px 10px 10px 10px;
+				padding: 10px 10px;
 			}
 			&:hover {
 				background-color: #71c7ec;
